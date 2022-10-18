@@ -38,3 +38,11 @@ docker build \
 ```bash
 docker run --name my-sql-backup -p:1433:1433 -it my-image:latest
 ```
+
+## Push to Azure
+
+```bash
+docker login <YOUR_URL>.azurecr.io
+docker tag <IMAGE_NAME> <YOUR_URL>.azurecr.io/<IMAGE_NAME>:latest
+docker push <YOUR_URL>.azurecr.io/<IMAGE_NAME>
+```
